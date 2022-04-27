@@ -229,8 +229,8 @@ app.post("/interactions", async function (req, res) {
   }
 });
 
-app.listen(3000, () => {
-  console.log("Listening on port 3000");
+app.listen(80, () => {
+  console.log("Listening on port 80");
 
   // Check if guild commands from commands.json are installed (if not, install them)
   HasGuildCommands(process.env.APP_ID, process.env.GUILD_ID, [

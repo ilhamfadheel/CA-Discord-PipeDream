@@ -145,12 +145,25 @@ app.post("/interactions", async function (req, res) {
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
-          content:
-            "https://discord.contentacademy.id/?user=" +
-            userId +
-            "&username=" +
-            username,
+          content: "Here is a special generated link to verify your account",
           flags: InteractionResponseFlags.EPHEMERAL,
+          components: [
+            {
+              type: MessageComponentTypes.ACTION_ROW,
+              components: [
+                {
+                  type: MessageComponentTypes.BUTTON,
+                  label: "Go To Content Academy",
+                  style: ButtonStyleTypes.LINK,
+                  url:
+                    "https://discord.contentacademy.id/?user=" +
+                    userId +
+                    "&username=" +
+                    username,
+                },
+              ],
+            },
+          ],
         },
       });
     }

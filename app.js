@@ -58,8 +58,7 @@ app.post("/interactions", async function (req, res) {
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
-          content:
-            "Please verify your Content Academy account by clicking the link",
+          content: 'Silahkan verifikasi akun CA mu dengan klik tombol "Verify"',
           components: [
             {
               type: MessageComponentTypes.ACTION_ROW,
@@ -145,7 +144,8 @@ app.post("/interactions", async function (req, res) {
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
-          content: "Here is a special generated link to verify your account",
+          content:
+            'Silahkan Login akun Content Academymu dengan klik tombol "login".\nApabila menemukan kendala atau kesulitan silahkan hubungi tim support dengan klik channel "Support".\n(Jika tidak ada channel open ticket pada handphone, silahkan klik garis 3 di kiri atas, nanti akan muncul "Support Ticket")',
           flags: InteractionResponseFlags.EPHEMERAL,
           components: [
             {
@@ -153,7 +153,7 @@ app.post("/interactions", async function (req, res) {
               components: [
                 {
                   type: MessageComponentTypes.BUTTON,
-                  label: "Go To Content Academy",
+                  label: "Login",
                   style: ButtonStyleTypes.LINK,
                   url:
                     "https://discord.contentacademy.id/?user=" +

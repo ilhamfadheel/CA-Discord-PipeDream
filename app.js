@@ -145,7 +145,7 @@ app.post("/interactions", async function (req, res) {
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
           content:
-            'Silahkan Login akun Content Academymu dengan klik tombol "login".\nApabila menemukan kendala atau kesulitan silahkan hubungi tim support dengan klik channel "Support".\n(Jika tidak ada channel open ticket pada handphone, silahkan klik garis 3 di kiri atas, nanti akan muncul "Support Ticket")',
+            'Silahkan Login akun Content Academymu dengan klik tombol "login".\nApabila menemukan kendala atau kesulitan silahkan hubungi tim support dengan klik channel "support-ticket".\n(Jika tidak ada channel support-ticket pada handphone, silahkan klik garis 3 di kiri atas, nanti akan muncul "Support Ticket")',
           flags: InteractionResponseFlags.EPHEMERAL,
           components: [
             {
